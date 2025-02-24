@@ -1,0 +1,104 @@
+package pod.consesionario;
+
+public class Vehiculo {
+    // Una clase tiene propiedades y métodos.
+    // Ámbito de la propiedad o método: public, private o protected.
+    /*
+        Private ocula a la clse que hace clientela y a la que hereda, es decir, solo se ve en la clase en la que esta.
+        Public se puede ver en la clase que hace clientela y en la que hereda, es decir, se puede ver en cualquier clase.
+        Protected es privado a la clase cliente y publico a la clase que hereda, es decir, lo puede ver la clase que ereda
+        pero en la clase cliente no.
+        No se deben modificar las propiedades desde el cliente (exterior).
+     */
+    /*******************REGLAS DE NEGOCIO********
+     marca y modelo se guardan en mayuscula y se devuelven en minuscula.
+     velocidad debe ser < 100.
+     */
+
+    private String marca;
+    private String modelo;
+    private String color;
+    private int velocidad;
+    private int potencia;
+
+    //===========================================================================
+
+    // Se puede repetir el nombre de métodos, los diferencia por el NUMERO y el TIPO de los argumentos.
+    //========================== METODOS CONSTRUCTORES =========================
+    // Consturctor vacio.
+    public Vehiculo(){ }
+        // Lo único que hace es crear el objeto vacio.
+        // Sin referenciar las propiedades.
+    
+    // Constructor con parámetros para inicializar sus propiedades.
+    public Vehiculo(String marca, String modelo, int velocidad){
+        // this.velocidad = velocidad;
+        // this.marca = marca;
+        // this.modelo = modelo;
+        this.setMarca(marca);
+        this.setModelo(modelo);
+        this.setVelocidad(velocidad);
+    }
+
+    //================= METODOS DE MODIFICACIÓN =============================
+    // Los setters son los responsable de modificar cada clase.
+    // En los set en donde se expresan las condiciones.
+    public void setMarca(String marca){
+        this.marca = marca.toUpperCase();
+    }
+
+    public void setModelo(String modelo){
+        this.modelo = modelo.toUpperCase();
+    }
+
+    public void setColor(String color){
+        this.color = color.toUpperCase();
+    }
+
+    public void setVelocidad(int velocidad){ // Condiciones.
+        if (velocidad < 100) {
+            this.velocidad = 100;
+            System.out.println("Error en velocidad, asigna xdef velocidad mínima.");
+        } else{
+            this.velocidad = velocidad;
+        }
+    }
+
+    public void setPotencia(int potencia){
+        this.potencia = potencia;
+    }
+
+    // Los getters responsable de leer las propiedades de clase.
+    public String getMarca(){
+        return this.marca.toLowerCase();
+    }
+
+    public String getModelo(){
+        return this.modelo.toLowerCase();
+    }
+
+    public String getColor(){
+        return this.color.toLowerCase();
+    }
+
+    public int getVelocidad(){
+        return this.velocidad;
+    }
+
+    public int getPotencia(){
+        return this.potencia;
+    }
+
+    //============================ IMPRESION DE DATOS ========================
+    // Visualización de la clase.
+    public void Inf(){
+        System.out.println("Vehiculo: " + this.getMarca() + " " + this.getModelo()
+        + this.getColor() + this.getVelocidad() + this.getPotencia());
+    }
+
+    public String toString(){
+        String info;
+        info = " Vehiculo{ \n" + " Marca: " + this.getMarca() + " \n" + " Modelo:" + this.getModelo() + " \n" + this.getVelocidad() + " km\n";
+        return info;
+    }
+}
