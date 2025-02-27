@@ -1,11 +1,18 @@
 class OjosSeguidores {
   constructor(selector) {
     this.ojos = document.querySelectorAll(selector);
+
+    // Eventos para el ratón y la pantalla táctil
     document.addEventListener("mousemove", (event) => this.moverPupilas(event));
+    document.addEventListener("touchmove", (event) => this.moverPupilas(event), { passive: false });
   }
 
   moverPupilas(event) {
-    const { clientX: mouseX, clientY: mouseY } = event;
+    event.preventDefault(); // Evita el desplazamiento de la pantalla en móviles
+
+    // Obtener coordenadas del ratón o del touch
+    const mouseX = event.touches ? event.touches[0].clientX : event.clientX;
+    const mouseY = event.touches ? event.touches[0].clientY : event.clientY;
 
     this.ojos.forEach((ojo) => {
       const rect = ojo.getBoundingClientRect();

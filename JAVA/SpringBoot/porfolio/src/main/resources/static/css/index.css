@@ -81,6 +81,9 @@ section {
     padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 20px;
+}
+
+.cv a{
     text-decoration: none;
 }
 
@@ -91,7 +94,7 @@ section {
     border-radius: 0 0 300px 300px;
     margin: 0 auto;
     position: relative;
-    padding: 15px;
+    padding-top: 10px;
     transition: height 0.3s ease;
 }
 
@@ -107,8 +110,11 @@ section {
     color: var(--bg-color-inicio);
     padding: 2px 3px;
     border-radius: 5px;
-    font-size: 9px;
     transition: opacity 0.3s ease;
+}
+
+.description h4{
+    font-size: 20px;
 }
 
 .cv:hover ~ .boca {
@@ -141,7 +147,6 @@ section {
     font-size: 14px;
     font-weight: bold;
     text-align: center;
-    text-decoration: none;
     line-height: 75px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
@@ -157,6 +162,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
 }
 
 .dedos {
