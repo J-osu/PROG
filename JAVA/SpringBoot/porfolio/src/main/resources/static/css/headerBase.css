@@ -1,0 +1,66 @@
+/* Estilos generales del navbar */
+.nav-extended {
+    background-color: #e57373; /* Color similar al de la imagen */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.nav-wrapper .brand-logo {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-left: 20px;
+    color: white;
+}
+
+/* Íconos del menú */
+.sidenav-trigger i {
+    font-size: 2rem;
+    color: white;
+}
+
+/* Links del navbar */
+#nav-mobile li a {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+#nav-mobile li a:hover {
+    color: #ffcc00;
+}
+
+/* Tabs del navbar extendido */
+.nav-content .tabs {
+    background-color: transparent;
+}
+
+.tabs .tab a {
+    color: white;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.tabs .tab a.active {
+    border-bottom: 3px solid white; /* Línea inferior como en la imagen */
+    color: white;
+}
+
+.tabs .tab a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Estilos para el menú lateral (sidenav) */
+.sidenav {
+    background-color: #e57373;
+}
+
+.sidenav li a {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.sidenav li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+

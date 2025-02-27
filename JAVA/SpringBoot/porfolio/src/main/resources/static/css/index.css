@@ -81,6 +81,7 @@ section {
     padding: 5px 10px;
     border-radius: 5px;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 
 .boca {
@@ -90,7 +91,7 @@ section {
     border-radius: 0 0 300px 300px;
     margin: 0 auto;
     position: relative;
-    padding-top: 20px;
+    padding: 15px;
     transition: height 0.3s ease;
 }
 
@@ -106,7 +107,7 @@ section {
     color: var(--bg-color-inicio);
     padding: 2px 3px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 9px;
     transition: opacity 0.3s ease;
 }
 
@@ -140,6 +141,7 @@ section {
     font-size: 14px;
     font-weight: bold;
     text-align: center;
+    text-decoration: none;
     line-height: 75px;
     cursor: pointer;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
