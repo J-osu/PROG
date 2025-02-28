@@ -1,66 +1,48 @@
-/* Estilos generales del navbar */
-.nav-extended {
-    background-color: #e57373; /* Color similar al de la imagen */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+.custom-navbar {
+    background-color: #1a1a2e !important; /* Color de fondo */
+    padding: 15px; /* Espaciado */
+  }
+  
+.navbar-toggler{
+    background-color: aqua;
 }
 
-/* Logo */
-.nav-wrapper .brand-logo {
-    font-size: 2rem;
+.offcanvas{
+    background-color: blueviolet;
+}
+
+  .custom-navbar .navbar-brand {
+    color: #ffcc00 !important; /* Color del texto del logo */
     font-weight: bold;
-    padding-left: 20px;
-    color: white;
-}
-
-/* Íconos del menú */
-.sidenav-trigger i {
-    font-size: 2rem;
-    color: white;
-}
-
-/* Links del navbar */
-#nav-mobile li a {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: 500;
+  }
+  
+  .custom-navbar .nav-link {
+    color: rgb(240, 239, 147) !important;
     transition: color 0.3s ease-in-out;
-}
-
-#nav-mobile li a:hover {
-    color: #ffcc00;
-}
-
-/* Tabs del navbar extendido */
-.nav-content .tabs {
-    background-color: transparent;
-}
-
-.tabs .tab a {
-    color: white;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-}
-
-.tabs .tab a.active {
-    border-bottom: 3px solid white; /* Línea inferior como en la imagen */
-    color: white;
-}
-
-.tabs .tab a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Estilos para el menú lateral (sidenav) */
-.sidenav {
-    background-color: #e57373;
-}
-
-.sidenav li a {
-    color: white;
-    font-size: 1.2rem;
-}
-
-.sidenav li a:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
+  }
+  
+  .custom-navbar .nav-link:hover {
+    color: #ffcc00 !important; /* Cambia el color al pasar el mouse */
+  }
+  
+  .custom-navbar .dropdown-menu {
+    background-color: #1c4dd4; /* Fondo del dropdown */
+  }
+  
+  .custom-navbar .dropdown-item {
+    color: rgb(220, 50, 50) !important;
+  }
+  
+  .custom-navbar .dropdown-item:hover {
+    background-color: #7196c2 !important; /* Fondo cuando se pasa el mouse */
+  }
+  
+  .custom-navbar .btn-outline-success {
+    border-color: #ffcc00 !important;
+    color: #ffcc00 !important;
+  }
+  
+  .custom-navbar .btn-outline-success:hover {
+    background-color: #ffcc00 !important;
+    color: #9999e8 !important;
+  }
