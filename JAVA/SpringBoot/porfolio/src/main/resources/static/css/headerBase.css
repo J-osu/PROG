@@ -1,14 +1,24 @@
+:root{
+  --bg-principal: #2d1b4f;
+  --color-primario: #9147ff;
+  --color-secundario: #ec8f16;
+  --color-terciario: #3c215e;
+}
+
+
+
+
 .custom-navbar {
-    background-color: #1a1a2e !important; /* Color de fondo */
+    background-color: var(--bg-principal) !important; /* Color de fondo */
     padding: 15px; /* Espaciado */
   }
   
 .navbar-toggler{
-    background-color: aqua;
+    background-color: transparent;
 }
 
 .offcanvas{
-    background-color: blueviolet;
+    background-color: #e8e4e4;
 }
 
   .custom-navbar .navbar-brand {
@@ -17,7 +27,7 @@
   }
   
   .custom-navbar .nav-link {
-    color: rgb(240, 239, 147) !important;
+    color: #ec8f16 !important;
     transition: color 0.3s ease-in-out;
   }
   
@@ -46,3 +56,10 @@
     background-color: #ffcc00 !important;
     color: #9999e8 !important;
   }
+
+  @media (max-width: 900px) and (orientation: landscape),(max-width: 412px) {
+    .navbar-toggler{
+      background-color: var(--color-primario);
+  }
+}
+

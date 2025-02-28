@@ -64,7 +64,7 @@ class OjosSeguidores {
 
   crearFlechaRecarga() {
     const flecha = document.createElement("div");
-    flecha.innerHTML = "&#x21bb;"; // Código Unicode de una flecha de recarga 🔄
+    flecha.innerHTML = "&#x21bb;"; // Código Unicode de una flecha de recarga.
     flecha.style.position = "fixed";
     flecha.style.top = "20px";
     flecha.style.left = "50%";

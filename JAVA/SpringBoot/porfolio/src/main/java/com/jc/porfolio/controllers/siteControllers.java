@@ -9,4 +9,12 @@ public class siteControllers {
     public String home(){
         return "/www/site/index";
     }
+    @GetMapping("/experiencia")
+    public String exper(){
+        return "/www/site/experiencia";
+    }
+    @GetMapping("/proyectos")
+    public String proyects(){
+        return "/www/site/proyectos";
+    }
 }
