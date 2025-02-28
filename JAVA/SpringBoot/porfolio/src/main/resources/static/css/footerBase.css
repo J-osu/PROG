@@ -2,9 +2,8 @@
     background-color: #1a1a2e; /* Fondo oscuro */
     color: white;
     padding: 20px 0;
-    margin-top: 20px;
+    margin-top: 125px;
     position: relative;
-    z-index: -100;
   }
   
   .custom-footer .col {
@@ -12,7 +11,7 @@
   }
   
   .custom-footer .icons-group {
-    font-size: 15px;
+    font-size: 30px;
     margin: 0 10px;
     color: #f514de;
   }
@@ -31,3 +30,28 @@
     display: block;
     margin-top: 10px;
   }
+
+  @media (max-width: 576px) {
+    .custom-footer {
+        padding: 10px;
+        margin-top: 50px;
+    }
+
+    .custom-footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-footer .col {
+        min-width: 100%;
+        text-align: center;
+    }
+
+    .custom-footer .icons-group {
+        font-size: 20px; /* Reduce más en móviles */
+    }
+
+    .custom-footer small {
+        font-size: 12px;
+    }
+}
