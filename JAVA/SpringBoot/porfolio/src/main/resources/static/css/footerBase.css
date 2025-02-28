@@ -1,0 +1,33 @@
+.custom-footer {
+    background-color: #1a1a2e; /* Fondo oscuro */
+    color: white;
+    padding: 20px 0;
+    margin-top: 20px;
+    position: relative;
+    z-index: -100;
+  }
+  
+  .custom-footer .col {
+    padding: 10px;
+  }
+  
+  .custom-footer .icons-group {
+    font-size: 15px;
+    margin: 0 10px;
+    color: #f514de;
+  }
+  
+  .custom-footer a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .custom-footer a:hover {
+    color: #f39c12;
+  }
+  
+  .custom-footer small {
+    display: block;
+    margin-top: 10px;
+  }
