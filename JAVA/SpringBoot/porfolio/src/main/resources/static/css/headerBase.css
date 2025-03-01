@@ -5,13 +5,11 @@
   --color-terciario: #3c215e;
 }
 
-
-
-
 .custom-navbar {
     background-color: var(--bg-principal) !important; /* Color de fondo */
     padding: 15px; /* Espaciado */
   }
+  
   
 .navbar-toggler{
     background-color: transparent;
