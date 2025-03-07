@@ -286,7 +286,7 @@ section {
     transform: scaleX(-1);
 }
 
-@media (max-width: 900px) and (orientation: landscape),(max-width: 412px) {
+@media (max-width: 902px) {
     .Mano {
         display: none !important;
     }

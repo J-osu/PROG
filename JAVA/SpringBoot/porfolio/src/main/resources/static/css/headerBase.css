@@ -1,63 +1,98 @@
-:root{
-  --bg-principal: #2d1b4f;
-  --color-primario: #9147ff;
-  --color-secundario: #ec8f16;
-  --color-terciario: #3c215e;
+:root {
+  --color-numero1: #2d1b4f;
+  --color-numero2: #e8e4e4;
+  --color-numero3: #9147ff;
+  --color-numero4: #ec8f16;
+  --color-numero5: #3c215e;
 }
 
-.custom-navbar {
-    background-color: var(--bg-principal) !important; /* Color de fondo */
-    padding: 15px; /* Espaciado */
-  }
-  
-  
-.navbar-toggler{
-    background-color: transparent;
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 
-.offcanvas{
-    background-color: #e8e4e4;
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-numero1);
 }
 
-  .custom-navbar .navbar-brand {
-    color: #ffcc00 !important; /* Color del texto del logo */
-    font-weight: bold;
-  }
-  
-  .custom-navbar .nav-link {
-    color: #ec8f16 !important;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .custom-navbar .nav-link:hover {
-    color: #ffcc00 !important; /* Cambia el color al pasar el mouse */
-  }
-  
-  .custom-navbar .dropdown-menu {
-    background-color: #1c4dd4; /* Fondo del dropdown */
-  }
-  
-  .custom-navbar .dropdown-item {
-    color: rgb(220, 50, 50) !important;
-  }
-  
-  .custom-navbar .dropdown-item:hover {
-    background-color: #7196c2 !important; /* Fondo cuando se pasa el mouse */
-  }
-  
-  .custom-navbar .btn-outline-success {
-    border-color: #ffcc00 !important;
-    color: #ffcc00 !important;
-  }
-  
-  .custom-navbar .btn-outline-success:hover {
-    background-color: #ffcc00 !important;
-    color: #9999e8 !important;
-  }
-
-  @media (max-width: 900px) and (orientation: landscape),(max-width: 412px) {
-    .navbar-toggler{
-      background-color: var(--color-primario);
-  }
+.navbar-dark {
+  background-color: var(--color-numero1);
 }
 
+.navbar-collapse {
+  display: flex !important;
+  justify-content: center;
+}
+
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar-brand {
+  margin-right: auto;
+}
+
+.navbar-nav .nav-link {
+  color: var(--color-numero4);
+  font-size: 20px;
+  padding: 10px 15px;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color-numero3);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--color-numero3);
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-numero4);
+}
+
+.custom-toggler {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  filter: invert(75%);
+  transition: transform 0.3s;
+}
+
+.custom-toggler:focus, .custom-toggler:hover {
+  box-shadow: none;
+}
+
+
+@media(max-width: 992px){
+  .navbar-nav{
+      flex-direction: column;
+      background-color: aquamarine;
+      position: fixed;
+      left: 100%;
+      transition: left 0.3s;
+      top: 55px;
+      width: 100%;
+      padding: 20px 0;
+  }
+
+  .navbar-toggler{
+      background-color: #e8e4e4 !important;
+  }
+
+  .menu_visible{
+      left: 0;
+  }
+}
