@@ -2,11 +2,11 @@ version: '3'
 services:
   db:
     container_name: bdformulario
-    image: mysql
+    image: mysl
     environment:
-      MYSQL_USER: formulario
+      MYSQL_USER: formulario01
       MYSQL_PASSWORD: pswformulario
-      MYSQL_DATABASE: formularioDB
+      MYSQL_DATABASE: formulariocontacto
       MYSQL_ROOT_PASSWORD: 1234
     volumes:
       - ./data:/var/lib/mysql

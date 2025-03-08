@@ -1,0 +1,192 @@
+:root{
+    --bg-color:#1f1934;
+    --text-color:#fff;
+    --main-color: #fd9e23;
+    --second-color:#ff6347;
+    --coolor-ffondo1: #2c1a47;
+    --color-fondo2: #9b9bc8;
+    --color-numero3: #9147ff;
+
+    --big-font: 6.6rem;
+    --p-font: 1rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(135deg, var(--coolor-ffondo1), var(--color-fondo2));
+}
+
+.tyt{
+    margin-top: 10%;
+    text-align: center;
+    color:#ec8f16d5;
+}
+
+
+/* Ajustes del timeline */
+.timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    gap: 50px;
+}
+
+.timeline {
+    position: absolute;
+    width: 2px;
+    background-color: #333;
+    height: 100%;
+}
+
+.event {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.event .card {
+    max-width: 15rem;
+    font-size: 0.9rem;
+}
+
+.event-left {
+    margin-top: 100px;
+    margin-right: 20%;
+}
+
+.event-right {
+    margin-top: 50px;
+    margin-left: 20%;
+}
+
+.card-header {
+    background-color: #f1b567 !important;
+    font-size: 19px;
+}
+
+.card-body {
+    background-color: #f8f9fa;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: #333;
+    z-index: 1;
+}
+
+.card-body p {
+    font-size: 14px;
+}
+
+.timeline-dot1 {
+    position: absolute;
+    left: 112%;
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.timeline-dot2 {
+    position: absolute;
+    right: 105%;
+    width: 15px;
+    height: 15px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+
+.event:nth-child(1) .timeline-dot {
+    top: 100px;
+}
+
+.event:nth-child(2) .timeline-dot {
+    top: 250px;
+}
+
+
+/*====================== Sección de habilidades ======================================*/
+.skills-table td i {
+    color: var(--main-color);
+    margin-right: 10px;
+    font-size: 1.2rem;
+    vertical-align: middle;
+    
+}
+.skills-section {
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.skills-section h2 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.skills-tables {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 200px;
+}
+
+.skills-table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 400px;
+    background-color: #30294e;
+    color: var(--text-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.skills-table th, .skills-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skills-table th {
+    background-color: var(--main-color);
+    color: #fff;
+    text-align: center;
+}
+
+.skills-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.skills-table tbody tr:hover {
+    background-color: rgba(255, 140, 0, 0.2);
+}
+
+.skills-table td {
+    text-align: left;
+    
+}
+
+.soft-skills-table td {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

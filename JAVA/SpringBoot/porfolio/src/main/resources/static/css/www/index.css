@@ -7,7 +7,6 @@
     --big-font: 6.6rem;
     --p-font: 1rem;
 }
-
 *{
     padding: 0;
     margin: 0;
@@ -26,6 +25,10 @@ body{
     margin: 0;
 }
 
+main{
+    flex: 1;
+  }
+
 section {
     padding-top: 109px;
 }
@@ -36,6 +39,7 @@ section {
     align-items: center;
     gap: 300px;
     margin-top: 0px;
+    text-decoration: none;
 }
 
 .cara {
@@ -83,7 +87,6 @@ section {
     border-radius: 5px;
     margin-bottom: 20px;
 }
-
 .cv a{
     text-decoration: none;
 }
@@ -95,7 +98,7 @@ section {
     border-radius: 0 0 300px 300px;
     margin: 0 auto;
     position: absolute;
-    padding-top: 10px;
+    padding-top: 20px;
     transition: height 0.3s ease;
 }
 
@@ -107,15 +110,12 @@ section {
     color: var(--bg-color-inicio);
 }
 
-.description {
+.description h4{
     color: var(--bg-color-inicio);
     padding: 2px 3px;
     border-radius: 5px;
     transition: opacity 0.3s ease;
-}
-
-.description h4{
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .cv:hover ~ .boca {
@@ -123,7 +123,7 @@ section {
 }
 
 .cv:hover ~ .boca .nombre h1,
-.cv:hover ~ .boca .description {
+.cv:hover ~ .boca .description h4 {
     opacity: 0;
 }
 
@@ -145,6 +145,7 @@ section {
     z-index: 1;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     background-color: var(--second-color-inicio);
+    color: var(--tercer-color-inicio);
     font-size: 14px;
     font-weight: bold;
     text-align: center;
@@ -286,7 +287,7 @@ section {
     transform: scaleX(-1);
 }
 
-@media (max-width: 902px) {
+@media (max-width: 900px) {
     .Mano {
         display: none !important;
     }
@@ -320,4 +321,3 @@ section {
         font-size: 25px;
     }
 }
-

@@ -17,4 +17,8 @@ public class siteControllers {
     public String proyects(){
         return "/www/site/proyectos";
     }
+    @GetMapping("/contacto")
+    public String contacto(){
+        return "/www/site/contacto";
+    }
 }

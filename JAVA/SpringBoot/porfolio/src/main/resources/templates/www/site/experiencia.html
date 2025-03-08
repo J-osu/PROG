@@ -1,96 +1,96 @@
 <html xmlns:th="https://www.thymeleaf.org"
-layout:decorate="~{www/layout/components/indexBase.html}" lang="es">
+layout:decorate="~{www/layout/indexBase.html}" lang="es">
 <head layout:fragment="extra-head">
-    <link rel="stylesheet" th:href="@{/css/experiencia.css}">
+    <link rel="stylesheet" th:href="@{/css/www/experiencia.css}">
 </head>
     <section layout:fragment="contenedor-principal">
-        <div class="container">
-            <div class="header">
-                <h1>Mi Experiencia Profesional</h1>
-                <p>Un resumen de mi trayectoria y habilidades adquiridas.</p>
-            </div>
-            <div class="timeline-container">
-                <div class="timeline"></div>
-                <div class="event event-left">
-                    <div class="card border-warning">
-                        <div class="card-header">Empresa 1</div>
-                        <div class="card-body">
-                            <h5 class="card-title">Desarrollador Web</h5>
-                            <p><strong>Fecha:</strong> 2020 - 2022</p>
-                            <p>Desarrollo de aplicaciones web con tecnologías modernas.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="event event-right">
-                    <div class="card border-warning">
-                        <div class="card-header">Empresa 2</div>
-                        <div class="card-body">
-                            <h5 class="card-title">Ingeniero de Software</h5>
-                            <p><strong>Fecha:</strong> 2022 - Presente</p>
-                            <p>Optimización de sistemas y desarrollo de software a medida.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <section class="skills-section">
-                <h2>Habilidades</h2>
-                <div class="skills-tables">
-                    <table class="skills-table">
-                        <thead>
-                            <tr>
-                                <th>Hard Skills</th>
-                                <th>Nivel</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><i class="fas fa-code"></i> HTML/CSS</td>
-                                <td>Avanzado</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fab fa-java"></i> Java</td>
-                                <td>Intermedio</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fab fa-git-alt"></i> Git/GitHub</td>
-                                <td>Intermedio</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fab fa-js-square"></i> JavaScript</td>
-                                <td>Bajo</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fab fa-python"></i> Python</td>
-                                <td>Bajo</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <table class="skills-table soft-skills-table">
-                        <thead>
-                            <tr>
-                                <th>Soft Skills</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><i class="fas fa-comments"></i> Comunicación</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-users"></i> Trabajo en equipo</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-lightbulb"></i> Resolución de problemas</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-clock"></i> Gestión del tiempo</td>
-                            </tr>
-                            <tr>
-                                <td><i class="fas fa-sync-alt"></i> Adaptabilidad</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+        <div class="tyt">
+            <h1>Mi Experiencia Profesional</h1>
+            <p>Un resumen de mi trayectoria y habilidades adquiridas.</p>
         </div>
+        <section class="timeline-container">
+            <div class="timeline"></div>
+            <div class="event event-left">
+                <div class="timeline-dot1"></div>
+                <div class="card border-warning">
+                    <div class="card-header">IntroPublicidad Creativa</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Tec.SistemasMircoinformáticos</h5>
+                        <p><strong>Fecha:</strong> 03/042024-14/06/2024</p>
+                        <p>Programador de páginas webs y editor de carteles publicitarios.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="event event-right">
+                <div class="timeline-dot2"></div>
+                <div class="card border-warning">
+                    <div class="card-header">Makito</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Desarrollador Web</h5>
+                        <p><strong>Fecha:</strong> 02/05/2024 - Presente</p>
+                        <p>Desarrollador de páginas y aplicaciones web</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="skills-section">
+            <h2>Habilidades</h2>
+            <div class="skills-tables">
+                <table class="skills-table">
+                    <thead>
+                        <tr>
+                            <th>Hard Skills</th>
+                            <th>Nivel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-code"></i> HTML/CSS</td>
+                            <td>Avanzado</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fab fa-java"></i> Java</td>
+                            <td>Intermedio</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fab fa-git-alt"></i> Git/GitHub</td>
+                            <td>Intermedio</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fab fa-js-square"></i> JavaScript</td>
+                            <td>Bajo</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fab fa-python"></i> Python</td>
+                            <td>Bajo</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="skills-table soft-skills-table">
+                    <thead>
+                        <tr>
+                            <th>Soft Skills</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i class="fas fa-comments"></i> Comunicación</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-users"></i> Trabajo en equipo</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-lightbulb"></i> Resolución de problemas</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-clock"></i> Gestión del tiempo</td>
+                        </tr>
+                        <tr>
+                            <td><i class="fas fa-sync-alt"></i> Adaptabilidad</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </section>
 </html>
