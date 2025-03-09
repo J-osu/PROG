@@ -9,17 +9,22 @@ layout:decorate="~{www/layout/indexBase.html}" lang="es">
             <div class="contenedor">
                 <div class="form-content">
                     <h1 id="title">Formulario</h1>
-                    <form>
+                    <form id="contactForm">
+                        <div class="input-field">
+                          <i class="fa-solid fa-envelope"></i>
+                          <label for="name" class="input-label">Nombre:</label>
+                          <input type="text" id="nombre" placeholder="Tu nombre">
+                        </div>
                         <div class="input-field">
                           <i class="fa-solid fa-envelope"></i>
                           <label for="name" class="input-label">Email:</label>
-                          <input type="email" placeholder="Correo.ejemplo@.com">
+                          <input type="email" id="correo" placeholder="Correo.ejemplo@.com">
                         </div>
                         
                         <div class="input-field">
                           <i class="fa-solid fa-comment-alt"></i>
                           <label for="name" class="input-label">Comenta:</label>
-                          <input type="text" placeholder="Escribe tu comentario">
+                          <input type="text" id="mensaje" placeholder="Escribe tu comentario">
                         </div>
                         
                         <div class="input-field">
