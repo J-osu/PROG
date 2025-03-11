@@ -19,6 +19,8 @@ header {
   align-items: center;
   width: 100%;
   background-color: var(--color-numero1);
+  margin: 0;
+  padding: 0;
 }
 
 .navbar-dark {
@@ -75,6 +77,11 @@ header {
   box-shadow: none;
 }
 
+
+.logo-nav{
+  height: 50px; /* Ajusta según lo necesites */
+  width: auto;
+}
 
 @media(max-width: 992px){
   .navbar-nav{
