@@ -4,93 +4,108 @@ layout:decorate="~{www/layout/indexBase.html}" lang="es">
     <link rel="stylesheet" th:href="@{/css/www/experiencia.css}">
 </head>
     <section layout:fragment="contenedor-principal">
-        <div class="tyt">
-            <h1>Mi Experiencia Profesional</h1>
-            <p>Un resumen de mi trayectoria y habilidades adquiridas.</p>
+        <div class="container my-5">
+          <!-- Línea de tiempo vertical -->
+          <section class="timeline-vertical">
+            <h2 class="text-center mb-5 encab">Experiencia Laboral</h2>
+            <div class="timeline">
+              <!-- Punto 1 -->
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="bi bi-code-slash"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>Desarrollador Frontend</h5>
+                  <p>2024 - 2025</p>
+                  <p>Estoy trabajando en la creación de interfaces de usuario modernas y responsivas utilizando HTML, CSS y JavaScript.</p>
+                </div>
+              </div>
+              <!-- Punto 2 -->
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="bi bi-braces"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>Desarrollador de Páginas webs</h5>
+                  <p>2023 - 2023</p>
+                  <p>Participé en la creación de distintas páginas webs con wordpress elements.</p>
+                </div>
+              </div>
+              <!-- Punto 3 -->
+              <div class="timeline-item">
+                <div class="timeline-icon">
+                  <i class="bi bi-gear-fill"></i>
+                </div>
+                <div class="timeline-content">
+                  <h5>Técnico en Sistemas Microinformáticos y Redes</h5>
+                  <p>2022 - 2023</p>
+                  <p>Enrutamiento de clables y configuración de redes</p>
+                </div>
+              </div>
+            </div>
+          </section>
+      
+          <!-- Habilidades con barras de porcentaje -->
+          <section class="skills my-5">
+            <h2 class="text-center mb-4 encab">Habilidades</h2>
+            <p class="text-center mb-4 txt-p">A lo largo de mi experiencia, he desarrollado habilidades técnicas y blandas que me permiten enfrentar desafíos de manera efectiva.</p>
+      
+            <!-- Barras de Hard Skills -->
+            <div class="row">
+              <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body c-carta">
+                    <h4 class="card-title mb-4"><i class="bi bi-tools"></i> Hard Skills</h4>
+                    <div class="skill-bar">
+                      <span>HTML/CSS</span>
+                      <div class="progress">
+                        <div class="progress-bar" style="width: 90%;">90%</div>
+                      </div>
+                    </div>
+                    <div class="skill-bar">
+                      <span>JavaScript</span>
+                      <div class="progress">
+                        <div class="progress-bar" style="width: 85%;">85%</div>
+                      </div>
+                    </div>
+                    <div class="skill-bar">
+                      <span>React</span>
+                      <div class="progress">
+                        <div class="progress-bar" style="width: 75%;">75%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+      
+              <!-- Barras de Soft Skills -->
+              <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                  <div class="card-body">
+                    <h4 class="card-title mb-4"><i class="bi bi-people-fill"></i> Soft Skills</h4>
+                    <div class="skill-bar">
+                      <span>Trabajo en equipo</span>
+                      <div class="progress">
+                        <div class="progress-bar" style="width: 95%;">95%</div>
+                      </div>
+                    </div>
+                    <div class="skill-bar">
+                      <span>Comunicación</span>
+                      <div class="progress">
+                        <div class="progress-bar" style="width: 80%;">80%</div>
+                      </div>
+                    </div>
+                    <div class="skill-bar">
+                      <span>Resolución de problemas</span>
+                      <div class="progress">
+                        <div class="progress-bar" style="width: 90%;">90%</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
-        <section class="timeline-container">
-            <div class="timeline"></div>
-            <div class="event event-left">
-                <div class="timeline-dot1"></div>
-                <div class="card border-warning">
-                    <div class="card-header">IntroPublicidad Creativa</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Tec.SistemasMircoinformáticos</h5>
-                        <p><strong>Fecha:</strong> 03/042024-14/06/2024</p>
-                        <p>Programador de páginas webs y editor de carteles publicitarios.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="event event-right">
-                <div class="timeline-dot2"></div>
-                <div class="card border-warning">
-                    <div class="card-header">Makito</div>
-                    <div class="card-body">
-                        <h5 class="card-title">Desarrollador Web</h5>
-                        <p><strong>Fecha:</strong> 02/05/2024 - Presente</p>
-                        <p>Desarrollador de páginas y aplicaciones web</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="skills-section">
-            <h2>Habilidades</h2>
-            <div class="skills-tables">
-                <table class="skills-table">
-                    <thead>
-                        <tr>
-                            <th>Hard Skills</th>
-                            <th>Nivel</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><i class="fas fa-code"></i> HTML/CSS</td>
-                            <td>Avanzado</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fab fa-java"></i> Java</td>
-                            <td>Intermedio</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fab fa-git-alt"></i> Git/GitHub</td>
-                            <td>Intermedio</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fab fa-js-square"></i> JavaScript</td>
-                            <td>Bajo</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fab fa-python"></i> Python</td>
-                            <td>Bajo</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="skills-table soft-skills-table">
-                    <thead>
-                        <tr>
-                            <th>Soft Skills</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><i class="fas fa-comments"></i> Comunicación</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-users"></i> Trabajo en equipo</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-lightbulb"></i> Resolución de problemas</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-clock"></i> Gestión del tiempo</td>
-                        </tr>
-                        <tr>
-                            <td><i class="fas fa-sync-alt"></i> Adaptabilidad</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
     </section>
 </html>

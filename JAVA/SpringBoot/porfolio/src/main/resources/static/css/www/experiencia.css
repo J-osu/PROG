@@ -20,173 +20,129 @@ body{
     background: linear-gradient(135deg, var(--coolor-ffondo1), var(--color-fondo2));
 }
 
-.tyt{
-    margin-top: 10%;
-    text-align: center;
-    color:#ec8f16d5;
+.encab{
+  margin-top: 20px;
+  color: #fd9e23;
 }
 
+.txt-p{
+  color: #fccc8f;
+}
 
-/* Ajustes del timeline */
-.timeline-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    gap: 50px;
+/* Estilos para la línea de tiempo vertical */
+.timeline-vertical {
+  position: relative;
+  padding: 40px 0;
 }
 
 .timeline {
-    position: absolute;
-    width: 2px;
-    background-color: #333;
-    height: 100%;
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.event {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background-color: var(--main-color);
 }
 
-.event .card {
-    max-width: 15rem;
-    font-size: 0.9rem;
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
 }
 
-.event-left {
-    margin-top: 100px;
-    margin-right: 20%;
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
 }
 
-.event-right {
-    margin-top: 50px;
-    margin-left: 20%;
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
 }
 
-.card-header {
-    background-color: #f1b567 !important;
-    font-size: 19px;
+.timeline-icon {
+  position: absolute;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #007bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.2rem;
 }
 
-.card-body {
-    background-color: #f8f9fa;
+.timeline-item:nth-child(odd) .timeline-icon {
+  right: -20px;
 }
 
-.timeline-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 2px;
-    background-color: #333;
-    z-index: 1;
+.timeline-item:nth-child(even) .timeline-icon {
+  left: -20px;
 }
 
-.card-body p {
-    font-size: 14px;
+.timeline-content {
+  background-color:#fccc8f;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #630fe2;
 }
 
-.timeline-dot1 {
-    position: absolute;
-    left: 112%;
-    width: 15px;
-    height: 15px;
-    background-color: var(--main-color);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
+.timeline-content p{
+  color: #1f1934;
 }
 
-.timeline-dot2 {
-    position: absolute;
-    right: 105%;
-    width: 15px;
-    height: 15px;
-    background-color: var(--main-color);
-    border-radius: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
+.skill-bar {
+  margin-bottom: 15px;
 }
 
-
-.event:nth-child(1) .timeline-dot {
-    top: 100px;
+.skill-bar span {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
-.event:nth-child(2) .timeline-dot {
-    top: 250px;
+.progress {
+  height: 20px;
+  background-color: #fccc8f;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-
-/*====================== Sección de habilidades ======================================*/
-.skills-table td i {
-    color: var(--main-color);
-    margin-right: 10px;
-    font-size: 1.2rem;
-    vertical-align: middle;
-    
-}
-.skills-section {
-    margin-top: 50px;
-    padding: 20px;
-    text-align: center;
-    color: var(--text-color);
+.progress-bar {
+  background-color: #9147ff;
+  color: #fccc8f;
+  text-align: center;
+  line-height: 20px;
+  font-size: 0.9rem;
 }
 
-.skills-section h2 {
-    font-size: 2rem;
-    color: var(--main-color);
-    margin-bottom: 20px;
-}
-
-.skills-tables {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 200px;
-}
-
-.skills-table {
-    border-collapse: collapse;
+/* Estilos responsivos para móviles y tablets */
+@media (max-width: 768px) {
+  .timeline-item {
     width: 100%;
-    max-width: 400px;
-    background-color: #30294e;
-    color: var(--text-color);
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
+    left: 0 !important;
+    text-align: left !important;
+    padding: 20px 20px 20px 60px;
+  }
 
-.skills-table th, .skills-table td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
+  .timeline-item:nth-child(odd) .timeline-icon,
+  .timeline-item:nth-child(even) .timeline-icon {
+    left: 10px;
+    right: auto;
+  }
 
-.skills-table th {
-    background-color: var(--main-color);
-    color: #fff;
-    text-align: center;
-}
-
-.skills-table tbody tr:nth-child(even) {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.skills-table tbody tr:hover {
-    background-color: rgba(255, 140, 0, 0.2);
-}
-
-.skills-table td {
-    text-align: left;
-    
-}
-
-.soft-skills-table td {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .timeline::before {
+    left: 30px;
+  }
 }

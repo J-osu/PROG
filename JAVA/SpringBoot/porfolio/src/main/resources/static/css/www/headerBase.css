@@ -79,24 +79,46 @@ header {
 
 
 .logo-nav{
-  height: 50px; /* Ajusta según lo necesites */
+  height: 65px;
   width: auto;
+  margin-left: 60%;
 }
 
 @media(max-width: 992px){
   .navbar-nav{
       flex-direction: column;
-      background-color: aquamarine;
+      background-color: rgba(131, 84, 158, 0.746);
       position: fixed;
       left: 100%;
       transition: left 0.3s;
-      top: 55px;
+      top: 11vh;
       width: 100%;
       padding: 20px 0;
   }
 
   .navbar-toggler{
       background-color: #e8e4e4 !important;
+  }
+
+  .menu_visible{
+      left: 0;
+  }
+}
+
+@media(max-width: 768px){
+  .navbar-nav{
+      flex-direction: column;
+      background-color: rgba(131, 84, 158, 0.746);
+      position: fixed;
+      left: 100%;
+      transition: left 0.3s;
+      top: 12.3vh;
+      width: 100%;
+      padding: 20px 0;
+  }
+
+  .navbar-toggler{
+      background-color: #b89fde !important;
   }
 
   .menu_visible{

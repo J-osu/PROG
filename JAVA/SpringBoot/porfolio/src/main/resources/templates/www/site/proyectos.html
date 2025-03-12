@@ -5,64 +5,56 @@
 </head>
 
 <section layout:fragment="contenedor-principal">
-  <section class="container mt-5 ">
-    <section>
-      <h1>Tu lo imaginas, yo lo creo</h1>
-      <div class="row row-cols-1 row-cols-md-4 g-4">
-          <div class="col">
-              <div class="card">
-                  <img th:src="@{/img/img-tetris.jpg}" class="card-img-top" alt="Tetris">
-                  <div class="card-body text-center">
-                      <a href="https://github.com/J-osu/GAMES/tree/main/tetris" target="_blank" class="btn btn-primary">Ver</a>
-                  </div>
-              </div>
+  <section class="container mt-5">
+    <!-- Filtro por tipo de proyecto -->
+    <div class="filters text-center mb-4">
+      <button class="btn btn-outline-primary active" data-filter="all">Todos</button>
+      <button class="btn btn-outline-primary" data-filter="games">Juegos</button>
+      <button class="btn btn-outline-primary" data-filter="tools">Herramientas</button>
+      <button class="btn btn-outline-primary" data-filter="other">Otros</button>
+    </div>
+
+    <!-- Sección de proyectos -->
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col" data-category="games">
+        <div class="card interactive-card">
+          <img th:src="@{/img/img-tetris.jpg}" class="card-img-top" alt="Tetris">
+          <div class="card-body text-center">
+            <h5 class="card-title">Tetris</h5>
+            <p class="card-text">Un clásico juego de Tetris.</p>
+            <a href="https://github.com/J-osu/GAMES/tree/main/tetris" target="_blank" class="btn btn-primary">Ver</a>
           </div>
-          <div class="col">
-              <div class="card">
-                  <img th:src="@{/img/img-snake-juego.png}" class="card-img-top" alt="Snake">
-                  <div class="card-body text-center">
-                      <a href="https://github.com/J-osu/GAMES/tree/main/snake" target="_blank" class="btn btn-primary">Ver</a>
-                  </div>
-              </div>
-          </div>
-          <div class="col">
-              <div class="card">
-                  <img th:src="@{/img/MotorGráfico.png}" class="card-img-top" alt="Motor Grafico">
-                  <div class="card-body text-center">
-                      <a href="https://github.com/J-osu/GAMES/tree/main/MTG(MoTor-Grafico)" target="_blank" class="btn btn-primary">Ver</a>
-                  </div>
-              </div>
-          </div>
-          <div class="col">
-              <div class="card">
-                  <img th:src="@{/img/En-Construccion-.png}" class="card-img-top" alt="En construcción">
-              </div>
-          </div>
+        </div>
       </div>
-      <div id="carouselExample" class="carousel slide mt-5" data-bs-ride="carousel">
-          <div class="carousel-inner">
-              <div class="carousel-item active">
-                  <img th:src="@{/img/img-snake-juego.png}" class="d-block w-100" alt="Snake">
-              </div>
-              <div class="carousel-item">
-                  <img th:src="@{/img/img-tetris.jpg}" class="d-block w-100" alt="Tetris">
-              </div>
-              <div class="carousel-item">
-                  <img th:src="@{/img/MotorGrafico}" class="d-block w-100" alt="MotorGráfico">
-              </div>
-              <div class="carousel-item">
-                  <img th:src="@{/img/loguin.jpg}" class="d-block w-100" alt="Loguin">
-              </div>
+      <div class="col" data-category="games">
+        <div class="card interactive-card">
+          <img th:src="@{/img/img-snake-juego.png}" class="card-img-top" alt="Snake">
+          <div class="card-body text-center">
+            <h5 class="card-title">Snake</h5>
+            <p class="card-text">El clásico juego de la serpiente.</p>
+            <a href="https://github.com/J-osu/GAMES/tree/main/snake" target="_blank" class="btn btn-primary">Ver</a>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-          </button>
+        </div>
       </div>
-    </section>
+      <div class="col" data-category="tools">
+        <div class="card interactive-card">
+          <img th:src="@{/img/motorgf.jpg}" class="card-img-top" alt="Motor Grafico">
+          <div class="card-body text-center">
+            <h5 class="card-title">Motor Gráfico</h5>
+            <p class="card-text">Un motor gráfico para juegos 2D.</p>
+            <a href="https://github.com/J-osu/GAMES/tree/main/MTG(MoTor-Grafico)" target="_blank" class="btn btn-primary">Ver</a>
+          </div>
+        </div>
+      </div>
+      <div class="col" data-category="other">
+        <div class="card interactive-card">
+          <img th:src="@{/img/En-Construccion-.png}" class="card-img-top" alt="En construcción">
+          <div class="card-body text-center">
+            <h5 class="card-title">En Construcción</h5>
+            <p class="card-text">Próximamente...</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </section>
