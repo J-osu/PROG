@@ -21,4 +21,8 @@ public class siteControllers {
     public String contacto(){
         return "/www/site/contacto";
     }
+    @GetMapping("/algo")
+    public String algo(){
+        return "/www/site/algo";
+    }
 }

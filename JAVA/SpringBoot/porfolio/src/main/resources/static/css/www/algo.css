@@ -1,0 +1,36 @@
+:root{
+    --bg-color-primario: #e6f0f5;
+    --bg-color-secundario: #039ee3;
+    --bg-color-header: #111;
+}
+
+
+/* Estilos personalizados */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color-header) !important;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    margin-top: 20px;
+    padding: 20px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
