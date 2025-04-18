@@ -1,5 +1,6 @@
 import React from 'react';
-import './ExperiencePage.css';
+import '../css/experiencia.css';
+import '../css/buttons.css';
 
 interface TimelineItem {
   id: number;

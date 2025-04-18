@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faCommentAlt } from '@fortawesome/free-solid-svg-icons';
-import './ContactPage.css';
+import '../css/contactos.css';
+import '../css/buttons.css';
 
 interface FormData {
   nombre: string;

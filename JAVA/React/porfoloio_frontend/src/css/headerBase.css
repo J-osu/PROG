@@ -1,0 +1,127 @@
+:root {
+  --color-numero1: #2d1b4f;
+  --color-numero2: #e8e4e4;
+  --color-numero3: #9147ff;
+  --color-numero4: #ec8f16;
+  --color-numero5: #3c215e;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-numero1);
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-dark {
+  background-color: var(--color-numero1);
+}
+
+.navbar-collapse {
+  display: flex !important;
+  justify-content: center;
+}
+
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.navbar-brand {
+  margin-right: auto;
+}
+
+.navbar-nav .nav-link {
+  color: var(--color-numero4);
+  font-size: 20px;
+  padding: 10px 15px;
+  transition: color 0.3s;
+  text-align: center;
+}
+
+.navbar-nav .nav-link:hover {
+  color: var(--color-numero3);
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--color-numero3);
+  font-weight: bold;
+  border-bottom: 2px solid var(--color-numero4);
+}
+
+.custom-toggler {
+  border: none;
+  background: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  filter: invert(75%);
+  transition: transform 0.3s;
+}
+
+.custom-toggler:focus, .custom-toggler:hover {
+  box-shadow: none;
+}
+
+
+.logo-nav{
+  height: 65px;
+  width: auto;
+  margin-left: 60%;
+}
+
+@media(max-width: 992px){
+  .navbar-nav{
+      flex-direction: column;
+      background-color: rgba(131, 84, 158, 0.746);
+      position: fixed;
+      left: 100%;
+      transition: left 0.3s;
+      top: 11vh;
+      width: 100%;
+      padding: 20px 0;
+  }
+
+  .navbar-toggler{
+      background-color: #e8e4e4 !important;
+  }
+
+  .menu_visible{
+      left: 0;
+  }
+}
+
+@media(max-width: 768px){
+  .navbar-nav{
+      flex-direction: column;
+      background-color: rgba(131, 84, 158, 0.746);
+      position: fixed;
+      left: 100%;
+      transition: left 0.3s;
+      top: 12.3vh;
+      width: 100%;
+      padding: 20px 0;
+  }
+
+  .navbar-toggler{
+      background-color: #b89fde !important;
+  }
+
+  .menu_visible{
+      left: 0;
+  }
+}

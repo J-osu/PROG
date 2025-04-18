@@ -1,0 +1,108 @@
+:root {
+  --color-numero1: #2d1b4f;
+  --color-numero2: #e8e4e4;
+  --color-numero3: #9147ff;
+  --color-numero4: #ec8f16;
+  --color-numero5: #3c215e;
+  --bg-color-inicio: #2c1a47;
+  --text-color-inicio: #9b9bc8;
+}
+
+body {
+  background: linear-gradient(135deg, var(--bg-color-inicio), var(--text-color-inicio));
+  text-align: center;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.row {
+  margin-top: 60px !important;
+}
+
+
+.interactive-card {
+  border: none;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  background-color: var(--color-numero2);
+}
+
+.interactive-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.interactive-card .card-img-top {
+  border-radius: 8px;
+  max-height: 150px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.interactive-card .card-body {
+  padding: 15px;
+}
+
+.filters {
+  margin-bottom: 30px;
+}
+
+.filters .btn {
+  margin: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.filters .btn.active {
+  background-color: var(--color-numero3);
+  color: white;
+}
+
+.filters .btn:hover {
+  background-color: var(--color-numero4);
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .header-description {
+    font-size: 1rem;
+  }
+
+  .card-img-top {
+    max-height: 120px;
+  }
+
+  .featured-card .card-img-top {
+    max-height: 200px;
+  }
+
+  .filters{
+    margin-top: 15vh !important;
+  }
+}

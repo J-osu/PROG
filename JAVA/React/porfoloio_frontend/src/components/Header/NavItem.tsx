@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './styles.module.css';
+import '../../css/headerBase.css';
 
 interface NavItemProps {
   to: string;
@@ -8,8 +8,8 @@ interface NavItemProps {
 }
 
 const NavItem: React.FC<NavItemProps> = ({ to, children }) => (
-  <li className={`nav-item ${styles.navItem}`}>
-    <Link className={`nav-link ${styles.navLink}`} to={to}>
+  <li className="nav-item">
+    <Link className="nav-link" to={to}>
       {children}
     </Link>
   </li>

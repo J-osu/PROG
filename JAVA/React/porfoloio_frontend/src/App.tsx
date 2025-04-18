@@ -7,6 +7,7 @@ import HomePage from './pages/HomePage';
 import ExperiencePage from './pages/ExperiencePage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
+import { AxiosError } from 'axios';
 // import NotFoundPage from './pages/NotFoundPage';
 // import LoadingSpinner from './components/LoadingSpinner';
 // import ErrorDisplay from './components/ErrorDisplay';
@@ -53,7 +54,7 @@ const App: React.FC = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get<PortfolioData>(
-          `${process.env.REACT_APP_API_URL}/api/data` || 'http://localhost:8080/api/data'
+          `${process.env.REACT_APP_API_URL ?? 'http://localhost:8080'}/api/data`
         );
         setPortfolioData(response.data);
       } catch (err) {
@@ -67,14 +68,6 @@ const App: React.FC = () => {
 
     fetchData();
   }, []);
-
-  if (loading) {
-    return <LoadingSpinner />;
-  }
-
-  if (error) {
-    return <ErrorDisplay message={error} onRetry={() => window.location.reload()} />;
-  }
 
   return (
     <Router>
@@ -104,7 +97,6 @@ const App: React.FC = () => {
                 />
               } 
             />
-            <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </main>
 

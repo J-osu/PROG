@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo-1.0.png';
-import styles from './styles.module.css';
+import '../../css/headerBase.css';
 import MobileMenuButton from './MobileMenuButton';
 import NavItem from './NavItem';
 
@@ -21,12 +21,12 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className={styles.header}>
-      <nav className={`navbar navbar-expand-lg navbar-dark fixed-top ${styles.navbar}`}>
+    <header className="header">
+      <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
         <div className="container">
           {/* Logo */}
-          <Link className={`navbar-brand ${styles.brand}`} to="/">
-            <img src={logo} alt="Logo" className={styles.logo} />
+          <Link className="navbar-brand" to="/">
+            <img src={logo} alt="Logo" className="logo-nav" />
           </Link>
 
           {/* Botón menú móvil */}

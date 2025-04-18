@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './HomePage.css'; // Tus estilos convertidos
-import cvPdf from '../../assets/pdf/Curriculum.pdf'; // Asegúrate de mover tu PDF
+import '../css/index.css'; // Tus estilos convertidos
+import cvPdf from '../assets/pdf/Curriculum.pdf';
+import '../css/buttons.css';
 
 const HomePage: React.FC = () => {
   return (

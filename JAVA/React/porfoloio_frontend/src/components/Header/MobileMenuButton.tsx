@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './styles.module.css';
+import '../../css/headerBase.css';
+import '../../css/buttons.css';
 
 interface MobileMenuButtonProps {
   isOpen: boolean;
@@ -8,13 +9,13 @@ interface MobileMenuButtonProps {
 
 const MobileMenuButton: React.FC<MobileMenuButtonProps> = ({ isOpen, toggle }) => (
   <button
-    className={`navbar-toggler ${styles.toggler}`}
+    className="navbar-toggler"
     type="button"
     onClick={toggle}
     aria-expanded={isOpen}
     aria-label="Toggle navigation"
   >
-    <span className={`navbar-toggler-icon ${styles.togglerIcon}`}></span>
+    <span className="navbar-toggler-icon"></span>
   </button>
 );
 

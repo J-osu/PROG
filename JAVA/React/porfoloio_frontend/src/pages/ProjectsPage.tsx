@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ProjectCard } from '../components/ProjectCard/ProjectCard';
-import './ProjectsPage.css';
+import '../css/porfolio.css';
+import '../css/buttons.css';
 
 interface Project {
   id: number;
