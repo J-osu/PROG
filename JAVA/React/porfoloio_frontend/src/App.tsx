@@ -2,18 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import Header from './components/Header/Index';
-import Footer from './components/Footer/Index'; // Asumiendo que ya creaste el Footer
+import Footer from './components/Footer/Index';
 import HomePage from './pages/HomePage';
 import ExperiencePage from './pages/ExperiencePage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
-import { AxiosError } from 'axios';
-// import NotFoundPage from './pages/NotFoundPage';
-// import LoadingSpinner from './components/LoadingSpinner';
-// import ErrorDisplay from './components/ErrorDisplay';
+
 import './App.css';
 
-// Tipos TypeScript para los datos del portfolio
+
 interface PortfolioData {
   home: {
     title: string;
@@ -46,26 +43,26 @@ interface PortfolioData {
 }
 
 const App: React.FC = () => {
-  const [loading, setLoading] = useState<boolean>(true);
+  
   const [portfolioData, setPortfolioData] = useState<PortfolioData | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get<PortfolioData>(
-          `${process.env.REACT_APP_API_URL ?? 'http://localhost:8080'}/api/data`
-        );
+        const API_URL = import.meta.env.VITE_API_URL ?? 'http://localhost:8080';
+        const response = await axios.get<PortfolioData>(`${API_URL}/api/data`);
+        console.log('Datos recibidos:', response.data);
         setPortfolioData(response.data);
-      } catch (err) {
-        const error = err as AxiosError;
-        setError(error.response?.data?.message || 'Error al cargar los datos del portfolio');
-        console.error('Error fetching portfolio data:', error);
-      } finally {
-        setLoading(false);
+      } catch (error) {
+        if (axios.isAxiosError(error)) {
+          console.error('Error fetching data:', error.message);
+        } else {
+          console.error('Unexpected error:', error);
+        }
       }
     };
-
+  
     fetchData();
   }, []);
 
@@ -75,29 +72,33 @@ const App: React.FC = () => {
         <Header />
         
         <main className="main-content">
-          <Routes>
-            <Route 
-              path="/" 
-              element={<HomePage data={portfolioData?.home} />} 
-            />
-            <Route 
-              path="/experiencia" 
-              element={<ExperiencePage experiences={portfolioData?.experience || []} />} 
-            />
-            <Route 
-              path="/proyectos" 
-              element={<ProjectsPage projects={portfolioData?.projects || []} />} 
-            />
-            <Route 
-              path="/contacto" 
-              element={
-                <ContactPage 
-                  contactInfo={portfolioData?.contact} 
-                  socialMedia={portfolioData?.contact?.socialMedia} 
-                />
-              } 
-            />
-          </Routes>
+          {portfolioData ? (
+            <Routes>
+              <Route 
+                path="/" 
+                element={<HomePage data={portfolioData.home} />} 
+              />
+              <Route 
+                path="/experiencia" 
+                element={<ExperiencePage experiences={portfolioData.experience || []} />} 
+              />
+              <Route 
+                path="/proyectos" 
+                element={<ProjectsPage projects={portfolioData.projects || []} />} 
+              />
+              <Route 
+                path="/contacto" 
+                element={
+                  <ContactPage 
+                    contactInfo={portfolioData?.contact || { email: '', phone: '', socialMedia: {} }} 
+                    socialMedia={portfolioData?.contact?.socialMedia || {}} 
+                  />
+                } 
+              />
+            </Routes>
+          ) : (
+            <p>Cargando datos...</p>
+          )}
         </main>
 
         <Footer />

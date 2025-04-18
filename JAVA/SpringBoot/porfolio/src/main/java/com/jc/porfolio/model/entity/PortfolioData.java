@@ -1,11 +1,19 @@
 package com.jc.porfolio.model.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.List;
 
 public class PortfolioData {
+    @JsonProperty("home")
     private Home home;
+
+    @JsonProperty("experience")
     private List<Experience> experience;
+
+    @JsonProperty("projects")
     private List<Project> projects;
+
+    @JsonProperty("contact")
     private Contact contact;
 
     // Getters y setters para los campos principales
