@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
-import Header from './components/Header';
-import Footer from './components/Footer'; // Asumiendo que ya creaste el Footer
+import Header from './components/Header/Index';
+import Footer from './components/Footer/Index'; // Asumiendo que ya creaste el Footer
 import HomePage from './pages/HomePage';
 import ExperiencePage from './pages/ExperiencePage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
-import NotFoundPage from './pages/NotFoundPage';
-import LoadingSpinner from './components/LoadingSpinner';
-import ErrorDisplay from './components/ErrorDisplay';
+// import NotFoundPage from './pages/NotFoundPage';
+// import LoadingSpinner from './components/LoadingSpinner';
+// import ErrorDisplay from './components/ErrorDisplay';
 import './App.css';
 
 // Tipos TypeScript para los datos del portfolio
