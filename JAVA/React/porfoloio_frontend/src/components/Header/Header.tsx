@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo-1.0.png';
-import '../../css/headerBase.css';
 import MobileMenuButton from './MobileMenuButton';
 import NavItem from './NavItem';
+import '../../css/headerBase.css';
 
 interface MenuItem {
   path: string;
