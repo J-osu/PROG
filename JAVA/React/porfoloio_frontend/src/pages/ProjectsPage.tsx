@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { ProjectCard } from '../components/ProjectCard/ProjectCard';
+import tetrisImage from '../assets/images/img-tetris.jpg';
+import snakeImage from '../assets/images/img-snake-juego.png';
+import motorGraficoImage from '../assets/images/MotorGrafico.png';
+import enConstruccionImage from '../assets/images/En-Construccion-.png';
 import '../css/porfolio.css';
 import '../css/buttons.css';
 
@@ -21,7 +25,7 @@ const ProjectsPage: React.FC = () => {
       id: 1,
       title: 'Tetris',
       description: 'Un clásico juego de Tetris',
-      imageUrl: '/img/img-tetris.jpg',
+      imageUrl: tetrisImage,
       category: 'games',
       projectUrl: 'https://github.com/J-osu/GAMES/tree/main/tetris'
     },
@@ -29,7 +33,7 @@ const ProjectsPage: React.FC = () => {
       id: 2,
       title: 'Snake',
       description: 'El clásico juego de la serpiente',
-      imageUrl: '/img/img-snake-juego.png',
+      imageUrl: snakeImage,
       category: 'games',
       projectUrl: 'https://github.com/J-osu/GAMES/tree/main/snake'
     },
@@ -37,7 +41,7 @@ const ProjectsPage: React.FC = () => {
       id: 3,
       title: 'Motor Gráfico',
       description: 'Un motor gráfico para juegos 2D',
-      imageUrl: '/img/motorgf.jpg',
+      imageUrl: motorGraficoImage,
       category: 'tools',
       projectUrl: 'https://github.com/J-osu/GAMES/tree/main/MTG(MoTor-Grafico)'
     },
@@ -45,7 +49,7 @@ const ProjectsPage: React.FC = () => {
       id: 4,
       title: 'En Construcción',
       description: 'Próximamente...',
-      imageUrl: '/img/En-Construccion-.png',
+      imageUrl: enConstruccionImage,
       category: 'other'
     }
   ];

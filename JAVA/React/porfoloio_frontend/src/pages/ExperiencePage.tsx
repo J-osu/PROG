@@ -1,6 +1,7 @@
 import React from 'react';
 import '../css/experiencia.css';
 import '../css/buttons.css';
+import Card from '../components/Card/Card';
 
 interface TimelineItem {
   id: number;
@@ -68,73 +69,46 @@ const ExperiencePage: React.FC = () => {
                 <i className={item.icon}></i>
               </div>
               <div className="timeline-content">
-                <h5>{item.title}</h5>
-                <p>{item.period}</p>
-                <p>{item.description}</p>
+                <Card
+                  icon={item.icon}
+                  title={item.title}
+                  subtitle={item.period}
+                  content={item.description}
+                  className="timeline-card"
+                />
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Habilidades con barras de porcentaje */}
-      <section className="skills my-5">
+      <section className="skills-section">
         <h2 className="text-center mb-4 encab">Habilidades</h2>
         <p className="text-center mb-4 txt-p">
           A lo largo de mi experiencia, he desarrollado habilidades técnicas y blandas que me permiten enfrentar desafíos de manera efectiva.
         </p>
 
-        <div className="row">
+        <div className="skills-container">
           {/* Hard Skills */}
-          <div className="col-md-6 mb-4">
-            <div className="card h-100">
-              <div className="card-body c-carta">
-                <h4 className="card-title mb-4"><i className="bi bi-tools"></i> Hard Skills</h4>
-                {hardSkills.map((skill, index) => (
-                  <div key={index} className="skill-bar mb-3">
-                    <span>{skill.name}</span>
-                    <div className="progress">
-                      <div 
-                        className="progress-bar" 
-                        style={{ width: `${skill.percentage}%` }}
-                        role="progressbar"
-                        aria-valuenow={skill.percentage}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                      >
-                        {skill.percentage}%
-                      </div>
-                    </div>
-                  </div>
-                ))}
+          <div className="skills-column">
+            <h4 className="skills-title"><i className="bi bi-tools"></i> Hard Skills</h4>
+            {hardSkills.map((skill, index) => (
+              <div key={`hard-${index}`} className="skill-item">
+                <span className="skill-name">{skill.name}</span>
+                <span className="skill-percentage">{skill.percentage}%</span>
               </div>
-            </div>
+            ))}
           </div>
 
           {/* Soft Skills */}
-          <div className="col-md-6 mb-4">
-            <div className="card h-100">
-              <div className="card-body">
-                <h4 className="card-title mb-4"><i className="bi bi-people-fill"></i> Soft Skills</h4>
-                {softSkills.map((skill, index) => (
-                  <div key={index} className="skill-bar mb-3">
-                    <span>{skill.name}</span>
-                    <div className="progress">
-                      <div 
-                        className="progress-bar" 
-                        style={{ width: `${skill.percentage}%` }}
-                        role="progressbar"
-                        aria-valuenow={skill.percentage}
-                        aria-valuemin={0}
-                        aria-valuemax={100}
-                      >
-                        {skill.percentage}%
-                      </div>
-                    </div>
-                  </div>
-                ))}
+          <div className="skills-column">
+            <h4 className="skills-title"><i className="bi bi-people-fill"></i> Soft Skills</h4>
+            {softSkills.map((skill, index) => (
+              <div key={`soft-${index}`} className="skill-item">
+                <span className="skill-name">{skill.name}</span>
+                <span className="skill-percentage">{skill.percentage}%</span>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

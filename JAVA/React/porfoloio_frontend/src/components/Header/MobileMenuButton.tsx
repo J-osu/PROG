@@ -1,6 +1,5 @@
 import React from 'react';
-import '../../css/headerBase.css';
-import '../../css/buttons.css';
+import '../../css/movilMenu.css';
 
 interface MobileMenuButtonProps {
   isOpen: boolean;

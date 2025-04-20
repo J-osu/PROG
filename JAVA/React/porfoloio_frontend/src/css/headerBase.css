@@ -1,89 +1,180 @@
+/* headerBase.css */
 :root {
-  --color-numero1: #2d1b4f;
-  --color-numero2: #e8e4e4;
-  --color-numero3: #9147ff;
-  --color-numero4: #ec8f16;
-  --color-numero5: #3c215e;
+  --color-primario: #2d1b4f;
+  --color-secundario: #e8e4e4;
+  --color-accent: #9147ff;
+  --color-accent-hover: #ec8f16;
+  --color-fondo-oscuro: #3c215e;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  padding-top: 80px; /* Añadido para evitar que el contenido quede detrás del header */
+.header {
+  width: 100%;
+  z-index: 1000;
 }
 
-header {
-  position: fixed; /* Añadido para fijar el header */
-  top: 0; /* Añadido */
-  left: 0; /* Añadido */
-  z-index: 1000; /* Añadido para asegurar que el header esté por encima */
+.navbar {
+  padding: 1rem 0;
+  background-color: var(--color-primario);
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(232, 228, 228, 0.1);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  background-color: var(--color-numero1);
-  margin: 0;
-  padding: 0;
-  height: 80px; /* Añadido altura fija para consistencia */
 }
 
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-/* Media queries ajustados */
-@media(max-width: 992px){
-  body {
-    padding-top: 70px; /* Ajuste para dispositivos más pequeños */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Empuja el logo a la izquierda */
+  margin-left: 2rem; /* Separación del borde izquierdo */
+}
+
+.logo-nav {
+  height: 60px; /* Tamaño aumentado */
+  width: auto;
+  transition: all 0.3s ease;
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end; /* Alinea los enlaces a la derecha */
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem; /* Espacio entre elementos */
+  margin-right: 2rem; /* Separación del borde derecho */
+}
+
+/* Items de navegación */
+.nav-item .nav-link {
+  color: var(--color-secundario);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  transition: all 0.3s ease;
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.nav-item .nav-link:hover {
+  color: var(--color-accent-hover);
+  transform: translateY(-2px);
+}
+
+.nav-item .nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-accent-hover);
+  transition: width 0.3s ease;
+}
+
+.nav-item .nav-link:hover::before {
+  width: 100%;
+}
+
+/* Botón activo/current */
+.nav-item .nav-link.active {
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+/* Menú móvil */
+@media (max-width: 991.98px) {
+  .container {
+    padding: 0 1.5rem;
   }
   
-  header {
-    height: 70px;
+  .navbar {
+    padding: 0.8rem 0;
+    position: relative;
   }
   
-  .navbar-nav{
-    flex-direction: column;
-    background-color: rgba(131, 84, 158, 0.746);
+  .navbar-brand {
+    margin-left: 1.5rem;
+  }
+  
+  .logo-nav {
+    height: 50px; /* Tamaño ligeramente menor en móvil */
+  }
+  
+  .navbar-collapse {
     position: fixed;
-    left: 100%;
-    transition: left 0.3s;
-    top: 70px; /* Usando valor fijo en px en lugar de vh */
-    width: 100%;
-    padding: 20px 0;
-    height: calc(100vh - 70px); /* Ajuste de altura */
-    overflow-y: auto; /* Para scroll si hay muchos items */
-  }
-
-  .navbar-toggler{
-    background-color: #e8e4e4 !important;
-  }
-
-  .menu_visible{
+    top: 80px;
     left: 0;
+    right: 0;
+    background-color: var(--color-fondo-oscuro);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    margin-right: 0;
+  }
+
+  .navbar-collapse.show {
+    max-height: 100vh;
+    padding: 1rem 2rem;
+    border-top: 1px solid rgba(232, 228, 228, 0.1);
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    margin-right: 0;
+  }
+
+  .nav-item {
+    width: 100%;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(232, 228, 228, 0.1);
+  }
+
+  .nav-item .nav-link {
+    padding: 1rem 0 !important;
+    font-size: 1.2rem;
   }
 }
 
-@media(max-width: 768px){
-  body {
-    padding-top: 60px; /* Ajuste para móviles */
-  }
-  
-  header {
-    height: 60px;
-  }
-  
-  .navbar-nav{
-    top: 60px;
-    height: calc(100vh - 60px);
-  }
-
-  .navbar-toggler{
-    background-color: #b89fde !important;
-  }
+/* Efecto scroll */
+.navbar-scrolled {
+  padding: 0.5rem 0;
+  background-color: var(--color-fondo-oscuro) !important;
+  backdrop-filter: blur(10px);
 }
 
-/* Contenedor principal - añadido para evitar problemas de layout */
-.main-content {
-  flex: 1;
-  width: 100%;
-  margin-top: 20px; /* Espacio adicional debajo del header */
+.navbar-scrolled .logo-nav {
+  height: 50px;
 }
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.navbar-collapse.show .nav-item {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.navbar-collapse.show .nav-item:nth-child(1) { animation-delay: 0.1s; }
+.navbar-collapse.show .nav-item:nth-child(2) { animation-delay: 0.2s; }
+.navbar-collapse.show .nav-item:nth-child(3) { animation-delay: 0.3s; }
+.navbar-collapse.show .nav-item:nth-child(4) { animation-delay: 0.4s; }

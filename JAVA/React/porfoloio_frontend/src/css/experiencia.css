@@ -1,148 +1,172 @@
-:root{
-    --bg-color:#1f1934;
-    --text-color:#fff;
-    --main-color: #fd9e23;
-    --second-color:#ff6347;
-    --coolor-ffondo1: #2c1a47;
-    --color-fondo2: #9b9bc8;
-    --color-numero3: #9147ff;
+/* experiencia.css */
 
-    --big-font: 6.6rem;
-    --p-font: 1rem;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Estilos generales */
+.experience-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-body{
-    background: linear-gradient(135deg, var(--coolor-ffondo1), var(--color-fondo2));
+/* Encabezados */
+.encab {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: 600;
 }
 
-.encab{
-  margin-top: 20px;
-  color: #fd9e23;
+.txt-p {
+  color: #7f8c8d;
+  margin-bottom: 30px;
 }
 
-.txt-p{
-  color: #fccc8f;
-}
-
-/* Estilos para la línea de tiempo vertical */
+/* Línea de tiempo vertical compacta */
 .timeline-vertical {
   position: relative;
-  padding: 40px 0;
+  padding-left: 50px;
 }
 
 .timeline {
   position: relative;
-  max-width: 800px;
-  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
+/* Línea vertical */
 .timeline::before {
   content: '';
   position: absolute;
   top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 100%;
-  background-color: var(--main-color);
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background: #4e73df;
 }
 
+/* Elementos de la línea de tiempo */
 .timeline-item {
   position: relative;
-  width: 50%;
-  padding: 20px 40px;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
 }
 
-.timeline-item:nth-child(odd) {
-  left: 0;
-  text-align: right;
-}
-
-.timeline-item:nth-child(even) {
-  left: 50%;
-  text-align: left;
+.timeline-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .timeline-icon {
   position: absolute;
-  top: 20px;
+  left: -40px;
+  top: 0;
   width: 40px;
   height: 40px;
-  background-color: #007bff;
+  background: white;
+  border: 2px solid #4e73df;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 1.2rem;
-}
-
-.timeline-item:nth-child(odd) .timeline-icon {
-  right: -20px;
-}
-
-.timeline-item:nth-child(even) .timeline-icon {
-  left: -20px;
+  font-size: 1rem;
+  color: #4e73df;
+  z-index: 1;
 }
 
 .timeline-content {
-  background-color:#fccc8f;
-  padding: 20px;
+  background: white;
+  padding: 15px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #630fe2;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border-left: 3px solid #4e73df;
 }
 
-.timeline-content p{
-  color: #1f1934;
-}
-
-.skill-bar {
-  margin-bottom: 15px;
-}
-
-.skill-bar span {
-  display: block;
+/* Estilos para las cards */
+.timeline-card .card-title {
+  font-size: 1.1rem;
   margin-bottom: 5px;
-  font-weight: bold;
+  color: #2c3e50;
 }
 
-.progress {
-  height: 20px;
-  background-color: #fccc8f;
-  border-radius: 10px;
-  overflow: hidden;
+.timeline-card .card-subtitle {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
-.progress-bar {
-  background-color: #9147ff;
-  color: #fccc8f;
-  text-align: center;
-  line-height: 20px;
+.timeline-card .card-text {
   font-size: 0.9rem;
+  color: #34495e;
+  line-height: 1.5;
 }
 
-/* Estilos responsivos para móviles y tablets */
+/* Sección de habilidades debajo */
+.skills-section {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 1px solid #eee;
+}
+
+.skills-container {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.skills-column {
+  flex: 1;
+}
+
+.skills-title {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.skills-title i {
+  margin-right: 10px;
+}
+
+.skill-item {
+  margin-bottom: 15px;
+  padding: 12px 15px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-name {
+  font-size: 0.9rem;
+  color: #2c3e50;
+}
+
+.skill-percentage {
+  font-size: 0.85rem;
+  color: #4e73df;
+  font-weight: 600;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .timeline-item {
-    width: 100%;
-    left: 0 !important;
-    text-align: left !important;
-    padding: 20px 20px 20px 60px;
+  .timeline-vertical {
+    padding-left: 40px;
   }
-
-  .timeline-item:nth-child(odd) .timeline-icon,
-  .timeline-item:nth-child(even) .timeline-icon {
-    left: 10px;
-    right: auto;
-  }
-
+  
   .timeline::before {
-    left: 30px;
+    left: 15px;
+  }
+  
+  .timeline-icon {
+    left: -30px;
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .skills-container {
+    flex-direction: column;
+    gap: 20px;
   }
 }

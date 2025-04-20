@@ -6,6 +6,7 @@ interface ProjectCardProps {
     title: string;
     description: string;
     imageUrl: string;
+    category: 'games' | 'tools' | 'other';
     projectUrl?: string;
   };
 }

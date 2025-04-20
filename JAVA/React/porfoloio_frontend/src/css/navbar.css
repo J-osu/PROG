@@ -1,0 +1,72 @@
+/* navbar.css */
+
+.nav-item {
+  position: relative;
+  margin: 0 0.5rem;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #333; /* Color base del texto */
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Efecto hover */
+.nav-link:hover {
+  color: #007bff; /* Color al pasar el mouse */
+  background-color: rgba(0, 123, 255, 0.1); /* Fondo sutil al pasar el mouse */
+}
+
+/* Efecto active/focus */
+.nav-link:focus,
+.nav-link.active {
+  color: #0056b3; /* Color más oscuro para estado activo */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+/* Indicador de página activa (opcional) */
+.nav-item.active .nav-link {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Efecto de subrayado animado (opcional) */
+.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-item:hover::after {
+  width: 70%; /* Ancho del subrayado al hacer hover */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .nav-item {
+    margin: 0.5rem 0;
+    width: 100%;
+  }
+
+  .nav-link {
+    padding: 0.75rem 1rem;
+    text-align: center;
+  }
+
+  .nav-item::after {
+    display: none; /* Ocultar subrayado en móvil si lo prefieres */
+  }
+}

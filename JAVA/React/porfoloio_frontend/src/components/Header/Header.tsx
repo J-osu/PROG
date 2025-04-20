@@ -36,7 +36,7 @@ const Header: React.FC = () => {
           />
 
           {/* Menú principal */}
-          <div className={`collapse navbar-collapse ${isMenuOpen ? 'show' : ''}`}>
+          <div className="collapse navbar-collapse">
             <ul className="navbar-nav ms-auto">
               {menuItems.map((item) => (
                 <NavItem key={item.path} to={item.path}>
